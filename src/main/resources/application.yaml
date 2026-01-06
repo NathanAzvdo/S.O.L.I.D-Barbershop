@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: S.O.L.I.D-Barbershop
+
+  datasource:
+    url: jdbc:postgresql://localhost:${DB_PORT}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
